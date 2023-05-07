@@ -16,4 +16,5 @@
 *.out
 *.app
 *.vs
+*.pdb
 bin
