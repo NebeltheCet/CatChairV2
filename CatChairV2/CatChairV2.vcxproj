@@ -154,11 +154,24 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Hooks\Hooks.cpp" />
+    <ClCompile Include="SDK\Libraries\MinHook\buffer.c" />
+    <ClCompile Include="SDK\Libraries\MinHook\hde\hde32.c" />
+    <ClCompile Include="SDK\Libraries\MinHook\hde\hde64.c" />
+    <ClCompile Include="SDK\Libraries\MinHook\hook.c" />
+    <ClCompile Include="SDK\Libraries\MinHook\trampoline.c" />
     <ClCompile Include="SDK\Utils\Console\Console.cpp" />
     <ClCompile Include="SDK\Utils\CRT\CRT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Hooks\Hooks.hpp" />
+    <ClInclude Include="SDK\Libraries\MinHook\buffer.h" />
+    <ClInclude Include="SDK\Libraries\MinHook\hde\hde32.h" />
+    <ClInclude Include="SDK\Libraries\MinHook\hde\hde64.h" />
+    <ClInclude Include="SDK\Libraries\MinHook\hde\pstdint.h" />
+    <ClInclude Include="SDK\Libraries\MinHook\hde\table32.h" />
+    <ClInclude Include="SDK\Libraries\MinHook\hde\table64.h" />
+    <ClInclude Include="SDK\Libraries\MinHook\MinHook.h" />
+    <ClInclude Include="SDK\Libraries\MinHook\trampoline.h" />
     <ClInclude Include="SDK\SDK.hpp" />
     <ClInclude Include="SDK\UnityEngine.hpp" />
     <ClInclude Include="SDK\Utils\Console\Console.hpp" />
