@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Hooks\Hooks.hpp" />
+    <ClInclude Include="SDK\Utils\LazyImporter\LazyImporter.hpp" />
+    <ClInclude Include="SDK\SDK.hpp" />
+    <ClInclude Include="SDK\UnityEngine.hpp" />
+    <ClInclude Include="SDK\Wrapper\Il2CPP\IL2CPP.hpp" />
+    <ClInclude Include="SDK\Utils\CRT\CRT.hpp" />
+    <ClInclude Include="SDK\Utils\Console\Console.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Hooks\Hooks.cpp" />
+    <ClCompile Include="SDK\Utils\CRT\CRT.cpp" />
+    <ClCompile Include="SDK\Utils\Console\Console.cpp" />
+  </ItemGroup>
+</Project>
