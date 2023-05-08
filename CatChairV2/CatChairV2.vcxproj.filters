@@ -3,8 +3,6 @@
   <ItemGroup>
     <ClInclude Include="Hooks\Hooks.hpp" />
     <ClInclude Include="SDK\Utils\LazyImporter\LazyImporter.hpp" />
-    <ClInclude Include="SDK\SDK.hpp" />
-    <ClInclude Include="SDK\UnityEngine.hpp" />
     <ClInclude Include="SDK\Wrapper\Il2CPP\IL2CPP.hpp" />
     <ClInclude Include="SDK\Utils\CRT\CRT.hpp" />
     <ClInclude Include="SDK\Utils\Console\Console.hpp" />
@@ -16,6 +14,8 @@
     <ClInclude Include="SDK\Libraries\MinHook\buffer.h" />
     <ClInclude Include="SDK\Libraries\MinHook\MinHook.h" />
     <ClInclude Include="SDK\Libraries\MinHook\trampoline.h" />
+    <ClInclude Include="SDK\Game\Unity\UnityEngine.hpp" />
+    <ClInclude Include="SDK\Game\SDK.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -27,5 +27,6 @@
     <ClCompile Include="SDK\Libraries\MinHook\buffer.c" />
     <ClCompile Include="SDK\Libraries\MinHook\hook.c" />
     <ClCompile Include="SDK\Libraries\MinHook\trampoline.c" />
+    <ClCompile Include="Hooks\Methods\BasePlayer.cpp" />
   </ItemGroup>
 </Project>

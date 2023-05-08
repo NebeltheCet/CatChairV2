@@ -1,6 +1,7 @@
 #pragma once
 #include "../../Utils/CRT/CRT.hpp"
 #include <cstdint>
+#include <cstdio>
 
 #define CLASS( nameSpace, className ) static Il2CppClass* StaticClass()										\
 									  {																		 \
@@ -102,7 +103,7 @@ private:
 			if (!offset)
 				return field;
 
-			printf("%s[0x%p]\n", name, (uintptr_t)field->il2cpp_field_get_offset());
+			printf("Dumped Field %s[0x%p]\n", name, (uintptr_t)field->il2cpp_field_get_offset());
 			return field->il2cpp_field_get_offset();
 		}
 
@@ -155,7 +156,7 @@ public:
 						continue;
 				}
 
-				printf("%s[0x%p]\n", method_name, (uintptr_t)method);
+				printf("Dumped Method %s[0x%p]\n", method_name, (uintptr_t)method);
 				return method;
 			}
 
@@ -228,6 +229,13 @@ public:
 		printf("Attached Il2Cpp Thread\n");
 	}
 
+	static decltype(auto) ThreadDetach()
+	{
+		static auto il2cpp_thread_detach = reinterpret_cast<void(*)()>(Crt::IL2CppExport("il2cpp_thread_detach"));
+		il2cpp_thread_detach();
+		printf("Detached Il2Cpp Thread\n");
+	}
+
 	template< typename t >
 	static decltype(auto) il2cpp_object_new(void* object)
 	{
@@ -251,7 +259,10 @@ public:
 			if (!klass)
 				continue;
 
-			printf("%s::%s[0x%p]\n", nameSpace, className, (uintptr_t)klass);
+			if (nameSpace != "")
+				printf("Dumped Class %s::%s[0x%p]\n", nameSpace, className, (uintptr_t)klass);
+			else
+				printf("Dumped Class %s[0x%p]\n", className, (uintptr_t)klass);
 			return klass;
 		}
 
